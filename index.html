@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisor de Valorant</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>DEVO JOGAR VALORANT?</h1>
+    </header>
+
+    <section>
+        <div id="container-principal">
+            <h1>RESPONDA DE FORMA HONESTA!</h1>
+            
+            <div class="pergunta">
+                <label for="saude">Como está sua saúde mental?</label>
+                <select id="saude">
+                    <option value="">--Escolha uma opção--</option>
+                    <option value="instavel">Instável</option>
+                    <option value="surto">Pronto para o surto</option>
+                    <option value="ferro">Já aceitei o ferro (lá ele)</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label for="choro">Você já chorou hoje?</label>
+                <select id="choro">
+                    <option value="">--Escolha uma opção--</option>
+                    <option value="sim">Sim</option>
+                    <option value="não">Ainda não</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label for="trapaceiros">Você gosta de ser xingado por racistas, xenofobicos, trolls e até mesmo pelo seu proprio DUO?</label>
+                <select id="trapaceiros">
+                    <option value="">--Cuidado amigo! Isso vai para o .GOV--</option>
+                    <option value="sim">Sim</option>
+                    <option value="não">Não</option>
+                    <option value="acostumei">Já acostumei</option>
+                    <option value="mutados">Eu muto todo mundo e só jogo de JUDGE XD</option>
+                    <option value="perigo">EU SOU ESSE TIPO DE PESSOA!!! (Aló Polícia Federal)</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label for="paciencia">Qual seu nivel de paciência?</label>
+                <input type="range" id="paciencia" min="0" max="100" value="50" oninput="atualizar_mensagem(this.value)">
+                <p id="veredito">Status: <span id="status_texto">Instável</span></p>
+            </div>
+
+            <button onclick="gerar_resposta()" id="btn_resultado">DEVO JOGAR?</button>
+
+            <div id="resposta_final"></div>
+            
+            <button onclick="resetar_site()" id="btn_reset" style="display:none;">TENTAR NOVAMENTE</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; MatheusSantos</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
